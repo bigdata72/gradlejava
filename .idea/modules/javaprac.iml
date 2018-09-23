@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":javaprac" external.linked.project.path="$MODULE_DIR$/../../javaprac" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.bigdata72.gradlejava" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../javaprac">
+      <excludeFolder url="file://$MODULE_DIR$/../../javaprac/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../javaprac/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../javaprac/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

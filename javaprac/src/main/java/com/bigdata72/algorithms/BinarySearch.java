@@ -31,6 +31,14 @@ public class BinarySearch {
 		return binarysearch(arr, fromIndex, toIndex, key);
 	}
 
+	public static int bruteForceSearch(int [] arr, int key){
+		for(int i=0; i<arr.length; i++){
+			if(arr[i] == key)
+				return i;
+		}
+		return -1;
+	}
+
 	// driver
 	public static void main(String[] args) {
 		// input an array

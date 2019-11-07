@@ -3,8 +3,30 @@ package com.bigdata72.algs;
 import java.util.*;
 
 public class Solution {
-	// METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
+
 	public ArrayList<String> topNCompetitors(int numCompetitors,
+											 int topNCompetitors,
+											 List<String> competitors,
+											 int numReviews,
+											 List<String> reviews){
+		// find the name of the companies in the reviews
+		for(String review : reviews) {
+			String[] words = review.split("\\s+");
+			CompanyReview cr;
+			for(String word : words){
+				if(competitors.contains(word)){
+					cr = new CompanyReview(word);
+					cr.incrementReviewCount();
+				}
+			}
+		}
+		return null;
+	}
+
+
+
+	// METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
+	public ArrayList<String> topNCompetitorsReject(int numCompetitors,
 											 int topNCompetitors,
 											 List<String> competitors,
 											 int numReviews,
@@ -61,5 +83,32 @@ public class Solution {
 	public static void main(String[] args) {
 
 
+	}
+
+	static class CompanyReview implements Comparable<CompanyReview>{
+		String name;
+
+		public int getReviewCount() {
+			return reviewCount;
+		}
+
+		public void setReviewCount(int reviewCount) {
+			this.reviewCount = reviewCount;
+		}
+
+		int reviewCount;
+
+		public CompanyReview(String name){
+			this.name = name;
+		}
+
+		public void incrementReviewCount(){
+			this.reviewCount++;
+		}
+
+		@Override
+		public int compareTo(CompanyReview anotherCompanyReview) {
+			return this.reviewCount - anotherCompanyReview.reviewCount;
+		}
 	}
 }
